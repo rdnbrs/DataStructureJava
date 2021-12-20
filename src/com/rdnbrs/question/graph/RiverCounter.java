@@ -1,4 +1,4 @@
-package com.rdnbrs.question.search;
+package com.rdnbrs.question.graph;
 
 public class RiverCounter {
 
