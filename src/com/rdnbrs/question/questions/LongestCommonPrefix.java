@@ -3,7 +3,7 @@ package com.rdnbrs.question.questions;
 public class LongestCommonPrefix {
 
     public static void main(String[] args) {
-        String[] strs = {"dog"};
+        String[] strs = {"dog", "dota"};
         System.out.println(longestCommonPrefix(strs));
     }
 
