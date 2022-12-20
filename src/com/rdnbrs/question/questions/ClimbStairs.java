@@ -35,6 +35,7 @@ public class ClimbStairs {
         System.out.println(climbStairs(3));
         System.out.println(climbStairs(4));
         System.out.println(climbStairs(5));
+        System.out.println(climbStairs(6));
         System.out.println(climbStairs(7));
     }
 
@@ -100,7 +101,7 @@ public class ClimbStairs {
      */
 
     /**
-     * Fibbonacci !!!!!
+     * Fibonacci !!!!!
      */
 
     public static int climbStairs(int n) {
