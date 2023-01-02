@@ -38,9 +38,9 @@ public class AddBinary {
             int sum = Integer.valueOf(String.valueOf(first[first.length - (1 + i)])) + Integer.valueOf(String.valueOf(second[second.length - (1 + i)])) + overload;
             if (sum >= 2) {
                 overload = 1;
-                result = String.valueOf(sum - 2) + result;
+                result = (sum - 2) + result;
             } else {
-                result = String.valueOf(sum) + result;
+                result = sum + result;
                 overload = 0;
             }
         }
@@ -49,9 +49,9 @@ public class AddBinary {
             int sum = Integer.valueOf(String.valueOf(first[first.length - (1 + i)])) + overload;
             if (sum >= 2) {
                 overload = 1;
-                result = String.valueOf(sum - 2) + result;
+                result = (sum - 2) + result;
             } else {
-                result = String.valueOf(sum) + result;
+                result = sum + result;
                 overload = 0;
             }
         }
