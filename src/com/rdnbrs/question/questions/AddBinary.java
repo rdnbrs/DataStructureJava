@@ -3,6 +3,7 @@ package com.rdnbrs.question.questions;
 public class AddBinary {
 
     /**
+     * https://leetcode.com/problems/add-binary/
      * Given two binary strings a and b, return their sum as a binary string.
      * <p>
      * <p>

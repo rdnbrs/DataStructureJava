@@ -5,6 +5,7 @@ import com.rdnbrs.question.questions.models.TreeNode;
 public class MinimumDepthOfBinaryTree {
 
     /**
+     * https://leetcode.com/problems/minimum-depth-of-binary-tree/
      * Given a binary tree, find its minimum depth.
      * <p>
      * The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
@@ -30,7 +31,7 @@ public class MinimumDepthOfBinaryTree {
      * -1000 <= Node.val <= 1000
      */
     public static void main(String[] args) {
-
+        System.out.println(minDepth(null));
     }
 
     public static int minDepth(TreeNode root) {
@@ -40,11 +41,11 @@ public class MinimumDepthOfBinaryTree {
             int leftDepth = minDepth(root.left);
             int rightDepth = minDepth(root.right);
 
-            if(root.left == null && root.right == null)
+            if (root.left == null && root.right == null)
                 return 1;
-            if(root.left == null)
+            if (root.left == null)
                 return 1 + rightDepth;
-            if(root.right == null)
+            if (root.right == null)
                 return 1 + leftDepth;
 
             return Math.min(leftDepth, rightDepth) + 1;

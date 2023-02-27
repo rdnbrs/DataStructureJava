@@ -3,6 +3,7 @@ package com.rdnbrs.question.questions;
 public class LengthOfLastWord {
 
     /**
+     * https://leetcode.com/problems/length-of-last-word/
      * Given a string s consisting of words and spaces, return the length of the last word in the string.
      * <p>
      * A word is a maximal
@@ -48,6 +49,6 @@ public class LengthOfLastWord {
          * return words[words.length - 1].length();
          */
 
-        return s.trim().length() - (s.trim().lastIndexOf(" ")+1);
+        return s.trim().length() - (s.trim().lastIndexOf(" ") + 1);
     }
 }
