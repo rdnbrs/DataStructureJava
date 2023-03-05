@@ -2,13 +2,56 @@ package com.rdnbrs.question.linkedlist;
 
 public class CycleDetection {
 
+    /**
+     * https://leetcode.com/problems/linked-list-cycle/
+     * Given head, the head of a linked list, determine if the linked list has a cycle in it.
+     * <p>
+     * There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+     * <p>
+     * Return true if there is a cycle in the linked list. Otherwise, return false.
+     * <p>
+     * <p>
+     * <p>
+     * Example 1:
+     * <p>
+     * <p>
+     * Input: head = [3,2,0,-4], pos = 1
+     * Output: true
+     * Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
+     * Example 2:
+     * <p>
+     * <p>
+     * Input: head = [1,2], pos = 0
+     * Output: true
+     * Explanation: There is a cycle in the linked list, where the tail connects to the 0th node.
+     * Example 3:
+     * <p>
+     * <p>
+     * Input: head = [1], pos = -1
+     * Output: false
+     * Explanation: There is no cycle in the linked list.
+     * <p>
+     * <p>
+     * Constraints:
+     * <p>
+     * The number of the nodes in the list is in the range [0, 104].
+     * -105 <= Node.val <= 105
+     * pos is -1 or a valid index in the linked-list.
+     * <p>
+     * <p>
+     * Follow up: Can you solve it using O(1) (i.e. constant) memory?
+     */
+
     public static class SinglyLinkedListNode {
         int data;
         SinglyLinkedListNode next;
     }
 
-    public static void detactCycle(SinglyLinkedListNode head) {
+    public static boolean detactCycle(SinglyLinkedListNode head) {
         boolean isCycle = false;
+
+        if (head == null) return isCycle;
+
         SinglyLinkedListNode singleMove = head;
         while (head.next != null && head.next.next != null) {
             singleMove = singleMove.next;
@@ -20,11 +63,7 @@ public class CycleDetection {
             }
         }
 
-        if (isCycle)
-            System.out.println("Cycle");
-        else
-            System.out.println("Not Cycle");
-
+        return isCycle;
     }
 
     public static void main(String[] args) {
@@ -65,7 +104,7 @@ public class CycleDetection {
         node9.data = 6;
         //node9.next = node3;
 
-        detactCycle(node1);
+        System.out.println(detactCycle(node1));
     }
 
 }
