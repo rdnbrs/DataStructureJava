@@ -59,7 +59,7 @@ public class PascalsTriangleSecond {
         for (int i = 2; i < numRows; i++) {
             row = new ArrayList<>();
             row.add(1);//first item
-            List<Integer> prevRow = (List<Integer>) result.get(i - 1);
+            List<Integer> prevRow = result.get(i - 1);
             for (int j = 0; j < prevRow.size() - 1; j++) {
                 row.add(prevRow.get(j) + prevRow.get(j + 1));
             }
