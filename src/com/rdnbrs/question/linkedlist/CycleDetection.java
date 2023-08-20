@@ -47,10 +47,9 @@ public class CycleDetection {
         SinglyLinkedListNode next;
     }
 
-    public static boolean detactCycle(SinglyLinkedListNode head) {
+    public static boolean detectCycle(SinglyLinkedListNode head) {
+        if (head == null) return false;
         boolean isCycle = false;
-
-        if (head == null) return isCycle;
 
         SinglyLinkedListNode singleMove = head;
         while (head.next != null && head.next.next != null) {
@@ -104,7 +103,7 @@ public class CycleDetection {
         node9.data = 6;
         //node9.next = node3;
 
-        System.out.println(detactCycle(node1));
+        System.out.println(detectCycle(node1));
     }
 
 }

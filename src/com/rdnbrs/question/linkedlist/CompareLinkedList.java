@@ -8,7 +8,7 @@ public class CompareLinkedList {
     }
 
     public static boolean compareNodes(SinglyLinkedListNode node1, SinglyLinkedListNode node2) {
-        boolean result = false;
+        boolean result;
         if (node1 == null && node2 == null) {
             result = true;
         } else if (node1 == null || node2 == null) {
@@ -17,7 +17,7 @@ public class CompareLinkedList {
             if (node1.data == node2.data)
                 result = compareNodes(node1.next, node2.next);
             else
-                return result;
+                return false;
         }
 
         return result;
