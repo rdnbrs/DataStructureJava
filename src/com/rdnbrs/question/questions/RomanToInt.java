@@ -59,7 +59,7 @@ public class RomanToInt {
     public static int romanToInt(String s) {
         char[] charList = s.toCharArray();
 
-        HashMap<String, Integer> values = new HashMap();
+        HashMap<String, Integer> values = new HashMap<>();
         values.put("I", 1);
         values.put("V", 5);
         values.put("X", 10);

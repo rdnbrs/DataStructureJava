@@ -2,7 +2,8 @@ package com.rdnbrs.question.graph;
 
 public class ZoneCounter {
 
-    protected static final int[][] sampleMap = {{0, 0, 0, 0, 1, 0, 0, 0},
+    protected static final int[][] sampleMap = {
+            {0, 0, 0, 0, 1, 0, 0, 0},
             {0, 0, 0, 1, 0, 0, 0, 1},
             {0, 0, 1, 0, 1, 0, 1, 0},
             {0, 1, 0, 0, 1, 1, 0, 0},

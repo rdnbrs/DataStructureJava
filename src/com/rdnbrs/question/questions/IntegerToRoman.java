@@ -58,7 +58,7 @@ public class IntegerToRoman {
     public static String intToRoman(int num) {
         StringBuilder stringBuilder = new StringBuilder();
 
-        ArrayList<String> romanValues = new ArrayList();
+        ArrayList<String> romanValues = new ArrayList<>();
         romanValues.add("M-1000");
         romanValues.add("CM-900");
         romanValues.add("D-500");
@@ -73,14 +73,12 @@ public class IntegerToRoman {
         romanValues.add("IV-4");
         romanValues.add("I-1");
 
-        for (int i = 0; i < romanValues.size(); i++) {
-            String[] romanParts = romanValues.get(i).split("-");
-            int divide = num / Integer.valueOf(romanParts[1]);
-            num = num % Integer.valueOf(romanParts[1]);
+        for (String romanValue : romanValues) {
+            String[] romanParts = romanValue.split("-");
+            int divide = num / Integer.parseInt(romanParts[1]);
+            num = num % Integer.parseInt(romanParts[1]);
 
-            for (int j = 0; j < divide; j++) {
-                stringBuilder.append(romanParts[0]);
-            }
+            stringBuilder.append(String.valueOf(romanParts[0]).repeat(Math.max(0, divide)));
         }
 
         return stringBuilder.toString();

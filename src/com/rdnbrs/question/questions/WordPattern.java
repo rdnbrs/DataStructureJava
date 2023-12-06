@@ -43,7 +43,7 @@ public class WordPattern {
     }
 
     public static boolean wordPattern(String pattern, String s) {
-        HashMap patternKeys = new HashMap();
+        HashMap<String, String> patternKeys = new HashMap<>();
         char[] patternChars = pattern.toCharArray();
         String[] checkStrings = s.split(" ");
 

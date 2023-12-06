@@ -44,28 +44,6 @@ public class KeysAndRooms {
      * All the values of rooms[i] are unique.
      */
     public static void main(String[] args) {
-//        List<Integer> room0 = new ArrayList<>();
-//        room0.add(1);
-//        room0.add(3);
-//
-//        List<Integer> room1 = new ArrayList<>();
-//        room1.add(3);
-//        room1.add(0);
-//        room1.add(1);
-//
-//        List<Integer> room2 = new ArrayList<>();
-//        room2.add(2);
-//
-//        List<Integer> room3 = new ArrayList<>();
-//        room3.add(0);
-//
-//        List<List<Integer>> roomList = new ArrayList<>();
-//        roomList.add(room0);
-//        roomList.add(room1);
-//        roomList.add(room2);
-//        roomList.add(room3);
-
-
         List<Integer> room0 = new ArrayList<>();
         room0.add(1);
 
@@ -87,7 +65,7 @@ public class KeysAndRooms {
     }
 
     public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
-        Map<Integer, Integer> visitedRoomList = new HashMap();
+        Map<Integer, Integer> visitedRoomList = new HashMap<>();
         visitedRoomList.put(0, 0);
         List<Integer> keys = rooms.get(0);
 

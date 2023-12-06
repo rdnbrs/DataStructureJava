@@ -12,7 +12,8 @@ public class KokoEatingBananas {
     }
 
     public static int minEatingSpeed(int[] piles, int h) {
-        int median = 1, max = Integer.MIN_VALUE;
+        int median = 1;
+        int max = Integer.MIN_VALUE;
 
         for (int item : piles) {
             if (item > max) max = item;
