@@ -13,7 +13,7 @@ public class CalculateMoneyinLeetcodeBank {
 
         int result = 0;
         for (int i = 0; i < weekCount; i++) {
-            result = result + sumOfWeek + (i * 7);
+            result += sumOfWeek + (i * 7);
         }
 
         for (int i = 1; i <= restDay; i++) {
